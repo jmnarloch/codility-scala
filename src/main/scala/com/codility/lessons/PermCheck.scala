@@ -9,13 +9,13 @@ object PermCheck {
     // write your code in Scala 2.10
 
     val N = A.length
-    val counts = new Array[Int](N)
+    val counts = new Array[Boolean](N)
 
     for (num <- A) {
-      if (num > N || counts(num - 1) == 1) {
+      if (num > N || counts(num - 1)) {
         return 0
       }
-      counts(num - 1) += 1
+      counts(num - 1) = true
     }
     return 1
   }
