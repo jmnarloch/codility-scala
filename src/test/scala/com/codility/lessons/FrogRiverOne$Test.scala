@@ -1,7 +1,5 @@
 package com.codility.lessons
 
-import org.scalatest.FunSuite
-
 /**
  * Tests {@link FrogRiverOne}
  */
@@ -12,6 +10,6 @@ class FrogRiverOne$Test extends UnitSpec {
     val X = 5
     val A = Array(1, 3, 1, 4, 2, 3, 5, 4)
 
-    FrogRiverOne.solution(X, A) should be (6)
+    FrogRiverOne.solution(X, A) should be(6)
   }
 }

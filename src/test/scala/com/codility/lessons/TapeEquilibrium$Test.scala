@@ -9,6 +9,6 @@ class TapeEquilibrium$Test extends UnitSpec {
 
     val A = Array(3, 1, 2, 4, 3)
 
-    TapeEquilibrium.solution(A) should be (1)
+    TapeEquilibrium.solution(A) should be(1)
   }
 }

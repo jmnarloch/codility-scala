@@ -1,7 +1,5 @@
 package com.codility.lessons
 
-import org.scalatest.FunSuite
-
 /**
  * PermMissingElem
  */

@@ -1,7 +1,5 @@
 package com.codility.lessons
 
-import org.scalatest.FunSuite
-
 /**
  * Tests {@link FrogJmp}
  */
@@ -13,6 +11,6 @@ class FrogJmp$Test extends UnitSpec {
     val Y = 85
     val D = 30
 
-    FrogJmp.solution(X, Y, D) should be (3)
+    FrogJmp.solution(X, Y, D) should be(3)
   }
 }

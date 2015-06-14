@@ -7,8 +7,8 @@ object PermMissingElem {
 
   def solution(A: Array[Int]): Int = {
 
-    val N : Long = A.length
-    var sum : Long = 0L
+    val N: Long = A.length
+    var sum: Long = 0L
     for (ind <- A.indices) {
       sum += A(ind)
     }
