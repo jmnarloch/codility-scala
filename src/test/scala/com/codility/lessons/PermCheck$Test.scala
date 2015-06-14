@@ -34,4 +34,18 @@ class PermCheck$Test extends UnitSpec {
 
     PermCheck.funcSolution(A) should be (0)
   }
+
+  it should "in place check if is permutation" in {
+
+    val A = Array(4, 1, 3, 2)
+
+    PermCheck.solutionInPlace(A) should be (1)
+  }
+
+  it should "in place check is not permutation" in {
+
+    val A = Array(4, 1, 3)
+
+    PermCheck.solutionInPlace(A) should be (0)
+  }
 }

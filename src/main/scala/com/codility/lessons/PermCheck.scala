@@ -6,7 +6,6 @@ package com.codility.lessons
 object PermCheck {
 
   def solution(A: Array[Int]): Int = {
-    // write your code in Scala 2.10
 
     val N = A.length
     val counts = new Array[Boolean](N)
@@ -18,6 +17,32 @@ object PermCheck {
       counts(num - 1) = true
     }
     return 1
+  }
+
+  def solutionInPlace(A: Array[Int]): Int = {
+
+    val N = A.length
+
+    var ind = 0
+    while (ind < A.length) {
+      if (A(ind) > N || A(ind) < 1) {
+        return 0
+      } else if (A(ind) != ind + 1) {
+        if (A(A(ind) - 1) == A(ind)) {
+          return 0
+        }
+        swap(A, ind, A(ind) - 1)
+      } else {
+        ind += 1
+      }
+    }
+    return 1
+  }
+
+  def swap[T](A: Array[T], i: Int, j: Int) = {
+    val tmp = A(i)
+    A(i) = A(j)
+    A(j) = tmp
   }
 
   def funcSolution(A: Array[Int]): Int = {
