@@ -12,19 +12,10 @@ object PermCheck {
     val counts = new Array[Int](N)
 
     for (num <- A) {
-      if (num > N) {
+      if (num > N || counts(num - 1) == 1) {
         return 0
       }
       counts(num - 1) += 1
-      if (counts(num - 1) > 1) {
-        return 0
-      }
-    }
-
-    for (count <- counts) {
-      if (count != 1) {
-        return 0
-      }
     }
     return 1
   }
