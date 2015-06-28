@@ -1,5 +1,7 @@
 package com.codility.lessons
 
+import scala.annotation.tailrec
+
 /**
  * Dominator
  */
@@ -79,6 +81,7 @@ object Dominator {
     countImpl(A, item, 0, 0)
   }
 
+  @tailrec
   def countImpl(A: Array[Int], item: Int, ind: Int, count: Int): Int = {
     if(ind >= A.length) {
       count
@@ -93,6 +96,7 @@ object Dominator {
       findFirstImpl(A, item, 0)
   }
 
+  @tailrec
   def findFirstImpl(A: Array[Int], item: Int, ind: Int): Int = {
     if(ind >= A.length) {
       -1
