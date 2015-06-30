@@ -3,7 +3,7 @@ package com.codility.lessons
 import org.scalatest.FunSuite
 
 /**
- *
+ * Tests {@link MaxProfit}
  */
 class MaxSliceSum$Test extends UnitSpec {
 

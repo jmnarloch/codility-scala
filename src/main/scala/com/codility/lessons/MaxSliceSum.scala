@@ -8,17 +8,16 @@ import scala.annotation.tailrec
 object MaxSliceSum {
 
   def solution(A: Array[Int]): Int = {
-
-    solution(A, 1, A(0), A(0))
-  }
-
-  @tailrec
-  def solution(A: Array[Int], ind: Int, maxSlice: Int, max: Int): Int = {
-
-    if(ind >= A.length) {
-      return max
+    @tailrec
+    def s(A: Array[Int], ind: Int, maxSlice: Int, max: Int): Int = {
+      if (ind >= A.length) {
+        max
+      } else {
+        val slice = math.max(A(ind), maxSlice + A(ind))
+        s(A, ind + 1, slice, math.max(max, slice))
+      }
     }
-    val slice = math.max(A(ind), maxSlice + A(ind))
-    solution(A, ind + 1, slice, math.max(max, slice))
+
+    s(A, 1, A(0), A(0))
   }
 }
