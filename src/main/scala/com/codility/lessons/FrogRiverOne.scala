@@ -23,7 +23,7 @@ object FrogRiverOne {
       if (t == -1) {
         return -1
       }
-      min = math.max(min, t)
+      min = min max t
     }
     min
   }
