@@ -18,7 +18,7 @@ object MaxCounters {
           counters(count - 1) = maxCounter
         }
         counters(count - 1) += 1
-        max = math.max(max, counters(count - 1))
+        max = max max counters(count - 1)
       } else {
 
         maxCounter = max
