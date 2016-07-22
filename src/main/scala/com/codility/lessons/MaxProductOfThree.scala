@@ -9,6 +9,6 @@ object MaxProductOfThree {
 
     val N = A.length
     val sort = A.sorted
-    math.max(sort(0) * sort(1) * sort(N - 1), sort(N - 1) * sort(N - 2) * sort(N - 3))
+    sort(0) * sort(1) * sort(N - 1) max sort(N - 1) * sort(N - 2) * sort(N - 3)
   }
 }
