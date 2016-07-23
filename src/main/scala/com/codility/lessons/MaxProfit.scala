@@ -23,8 +23,8 @@ object MaxProfit {
 
     for (ind <- 1 until A.length) {
 
-      maxSlice = math.max(0, maxSlice + A(ind))
-      maxProfit = math.max(maxProfit, maxSlice)
+      maxSlice = 0 max maxSlice + A(ind)
+      maxProfit = maxProfit max maxSlice
     }
     maxProfit
   }
